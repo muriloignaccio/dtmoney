@@ -12,10 +12,10 @@ export const Container = styled.form`
     width: 100%;
     padding: 0 1.5rem;
     height: 4rem;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
 
-    border: 1px solid #D7D7D7;
-    background: #E7E9EE;
+    border: 1px solid #d7d7d7;
+    background: #e7e9ee;
 
     font-weight: 400;
     font-size: 1rem;
@@ -36,14 +36,14 @@ export const Container = styled.form`
     background: var(--green);
     color: var(--shape);
     border: none;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     font-size: 1rem;
     font-weight: 600;
     margin-top: 1.5rem;
-    transition: filter .2s;
+    transition: filter 0.2s;
 
     &:hover {
-      filter: brightness(.9);
+      filter: brightness(0.9);
     }
   }
 `;
@@ -52,33 +52,34 @@ export const TransactionTypeContainer = styled.div`
   margin: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: .5rem;
+  gap: 0.5rem;
 `;
 
 interface TransactionTypeButtonProps {
   isActive: boolean;
-  activeColor: 'green' | 'red'
+  activeColor: "green" | "red";
 }
 
 const colors = {
-  green: '#33CC95',
-  red: '#E52E4D'
-}
+  green: "#33CC95",
+  red: "#E52E4D",
+};
 
 export const TransactionTypeButton = styled.button<TransactionTypeButtonProps>`
   height: 4rem;
-  border: 1px solid #D7D7D7;
-  border-radius: .25rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.25rem;
 
-  background: ${({ isActive, activeColor }) => isActive ? transparentize(.9, colors[activeColor]) : 'transparent' };
+  background: ${({ isActive, activeColor }) =>
+    isActive ? transparentize(0.9, colors[activeColor]) : "transparent"};
 
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 
   &:hover {
-    border-color: ${darken(0.1, '#D7D7D7')};
+    border-color: ${darken(0.1, "#D7D7D7")};
   }
 
   img {

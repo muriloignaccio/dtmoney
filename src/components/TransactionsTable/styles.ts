@@ -5,7 +5,7 @@ export const Container = styled.div`
 
   table {
     width: 100%;
-    border-spacing: 0 .5rem;
+    border-spacing: 0 0.5rem;
 
     th {
       color: var(--text-body);
@@ -18,7 +18,7 @@ export const Container = styled.div`
     td {
       background: var(--shape);
       border: none;
-      border-radius: .25rem;
+      border-radius: 0.25rem;
       padding: 1rem 2rem;
 
       color: var(--text-body);

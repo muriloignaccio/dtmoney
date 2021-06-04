@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.header`
   background: var(--blue);
@@ -13,7 +13,6 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 
   button {
     background: var(--blue-light);
@@ -24,11 +23,10 @@ export const Content = styled.div`
     font-weight: 600;
     height: 3rem;
     padding: 0 2rem;
-    transition: filter .2s;
+    transition: filter 0.2s;
 
     &:hover {
       filter: brightness(0.9);
     }
   }
-
 `;
