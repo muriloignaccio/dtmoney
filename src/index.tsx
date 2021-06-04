@@ -21,7 +21,7 @@ createServer({
         {
           id: 2,
           title: "Hamburguer",
-          amount: -59,
+          amount: 59,
           type: "withdraw",
           category: "Alimentação",
           createdAt: new Date("2021-04-10 09:00:00"),
@@ -29,7 +29,7 @@ createServer({
         {
           id: 3,
           title: "Aluguel de apartamento",
-          amount: -1200,
+          amount: 1200,
           type: "withdraw",
           category: "Casa",
           createdAt: new Date("2021-03-27 09:00:00"),
@@ -47,9 +47,10 @@ createServer({
   },
   routes() {
     this.namespace = "api";
+  
 
-    this.get("/transactions", () => {
-      return this.schema.all("transaction");
+    this.get("/transactions", (schema) => {
+      return schema.all("transaction");
     });
 
     this.post("/transactions", (schema, request) => {
